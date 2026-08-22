@@ -1,0 +1,9 @@
+{
+  "name": "China 2026 Trip Dashboard",
+  "short_name": "China 2026",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#0f172a",
+  "description": "Mobile-first China 2026 trip dashboard"
+}
