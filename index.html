@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="China 2026" />
+  <title>China 2026 · Trip Dashboard</title>
+  <style>
+    :root{--bg:#f6f7fb;--ink:#111827;--muted:#667085;--card:#fff;--line:#e6e8ef;--navy:#0f172a;--blue:#2563eb;--gold:#f59e0b;--green:#059669;--red:#dc2626;--radius:22px;--shadow:0 10px 30px rgba(15,23,42,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;line-height:1.45;padding-bottom:98px}.wrap{max-width:760px;margin:auto}.hero{background:linear-gradient(145deg,#0f172a,#1d4ed8);color:#fff;padding:calc(28px + env(safe-area-inset-top)) 20px 28px;border-radius:0 0 30px 30px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:12px;opacity:.72}.hero h1{font-size:36px;line-height:1.02;margin:8px 0 10px}.hero p{margin:0;opacity:.86;font-size:16px}.route{display:flex;gap:8px;overflow:auto;padding:18px 0 3px;scrollbar-width:none}.route::-webkit-scrollbar{display:none}.chip{flex:0 0 auto;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);padding:8px 11px;border-radius:999px;font-size:13px;font-weight:700}.content{padding:18px 14px}.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#64748b;font-weight:900;margin:24px 5px 10px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin:12px 0;overflow:hidden}.card.pad{padding:18px}.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick{padding:15px;border-radius:17px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:800}.quick span{display:block;color:var(--muted);font-weight:600;font-size:12px;margin-top:3px}.alert{background:#fff7ed;border-color:#fed7aa}.alert strong{color:#9a3412}.details>summary{list-style:none;cursor:pointer;padding:18px;display:flex;align-items:center;gap:13px;-webkit-tap-highlight-color:transparent}.details>summary::-webkit-details-marker{display:none}.city-dot{width:43px;height:43px;border-radius:14px;background:#eff6ff;display:grid;place-items:center;font-size:23px}.summary-copy{min-width:0;flex:1}.summary-copy b{font-size:20px;display:block}.summary-copy small{color:var(--muted);font-size:13px}.chev{font-size:20px;color:#94a3b8;transition:.2s}.details[open] .chev{transform:rotate(180deg)}.inside{border-top:1px solid var(--line);padding:4px 18px 20px}.inside h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#64748b;margin:21px 0 8px}.inside p{margin:6px 0;color:#334155}.day{padding:13px 0;border-bottom:1px dashed #e2e8f0}.day:last-child{border-bottom:0}.day b{display:block}.tag{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:800;margin:3px 4px 3px 0}.photo{background:#fff7ed;color:#b45309}.food{background:#fef2f2;color:#b91c1c}.night{background:#eef2ff;color:#4338ca}.hotel{background:#ecfdf5;color:#047857}.transport{background:#eff6ff;color:#1d4ed8}.place{padding:12px 0;border-bottom:1px solid #eef0f4}.place:last-child{border-bottom:0}.place b{display:block}.place em{font-style:normal;color:#64748b;font-size:13px}.maps{display:inline-block;margin-top:7px;color:var(--blue);font-weight:800;text-decoration:none;font-size:13px}.top-pick{border-left:4px solid var(--gold);padding-left:10px}.timeline{display:grid;grid-template-columns:60px 1fr;gap:4px 12px;margin:10px 0}.timeline .time{font-size:12px;color:#64748b;font-weight:800;padding-top:2px}.timeline .event{padding-bottom:11px}.logistics details{border-top:1px solid var(--line)}.logistics details:first-child{border-top:0}.logistics summary{padding:16px 18px;font-weight:850;cursor:pointer}.logistics .body{padding:0 18px 17px}.bottom-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-top:1px solid rgba(15,23,42,.08)}.bottom-nav .bar{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.bottom-nav a{text-align:center;text-decoration:none;color:#64748b;font-size:11px;font-weight:800;padding:7px 3px}.bottom-nav a span{font-size:21px;display:block;line-height:1.05}.footer{color:#94a3b8;text-align:center;font-size:12px;padding:24px 20px}.privacy{font-size:12px;color:#64748b;background:#f8fafc;border-radius:14px;padding:11px 13px;margin-top:14px}@media(min-width:700px){.hero{margin-top:18px;border-radius:30px}.hero h1{font-size:44px}.content{padding-left:0;padding-right:0}}
+  </style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="eyebrow">Mike's China 2026</div>
+    <h1>Trip Dashboard 🇨🇳</h1>
+    <p>Aug 30 – Sep 13 · built for the phone in your hand.</p>
+    <div class="route" aria-label="Trip route">
+      <span class="chip">Shanghai</span><span class="chip">Zhangjiajie</span><span class="chip">Furong</span><span class="chip">Chengdu</span><span class="chip">Xi’an</span><span class="chip">Beijing</span><span class="chip">Shanghai</span>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="section-title">Trip at a glance</div>
+    <div class="quick-grid">
+      <a class="quick" href="#cities">🗺️ Cities<span>Day plans + nightlife</span></a>
+      <a class="quick" href="#logistics">✈️ Logistics<span>Flights, trains, hotels</span></a>
+      <a class="quick" href="#photos">📸 Best photos<span>Priority shots</span></a>
+      <a class="quick" href="#verify">⚠️ Verify<span>Things to reconfirm</span></a>
+    </div>
+
+    <div class="card pad alert" id="verify">
+      <strong>⚠️ Verify before departure</strong>
+      <p>The current itinerary has Beijing → Shanghai on Sep 12, while an older standalone Beijing hotel confirmation extends through Sep 13. Confirm the final Beijing checkout and Sep 12 Shanghai night.</p>
+      <p>Domestic flight/train times are still TBD in the current trip files.</p>
+    </div>
+
+    <div class="section-title" id="cities">Cities</div>
+
+    <details class="card details" open>
+      <summary><div class="city-dot">🌃</div><div class="summary-copy"><b>Shanghai</b><small>Aug 31–Sep 2 · return Sep 12</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>Historic Bund façades facing futuristic Pudong across the Huangpu. This is the trip’s strongest skyline-photo city.</p>
+        <h3>Daytime</h3>
+        <div class="day"><b>Aug 31 · Arrival</b>PVG arrival 4:05 PM → private transfer → Pullman Shanghai Jing An. Optional easy walk at M50 / Moganshan Road.</div>
+        <div class="day"><b>Sep 1 · Shanghai icons</b>Yuyuan Garden → Oriental Pearl Tower → Nanjing Road → The Bund.</div>
+        <div class="day"><b>Sep 12 · Return night</b>Fly back from Beijing after touring. Final Shanghai evening, timing dependent.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Pullman Shanghai Jing An</b><em>330 Meiyuan Road, Jing’an District</em><br><a class="maps" href="https://maps.apple.com/?q=Pullman+Shanghai+Jing+An" target="_blank">Open in Apple Maps ↗</a><p><span class="tag hotel">NEAR HOTEL</span> M50 Arts Community + Moganshan Road are ideal low-effort arrival-day exploring; Jade Buddha Temple is another nearby option.</p></div>
+        <h3>Top restaurants</h3>
+        <div class="place top-pick"><b>Sir Elly’s · The Peninsula</b><em>⭐ Michelin · Northern Italian · Bund terrace</em></div>
+        <div class="place"><b>8½ Otto e Mezzo Bombana</b><em>⭐⭐ Michelin · Italian fine dining</em></div>
+        <div class="place"><b>Mr & Mrs Bund</b><em>Modern French · high-energy Bund institution</em></div>
+        <div class="place"><b>Lost Heaven on the Bund</b><em>Yunnan flavors · beautiful setting</em></div>
+        <h3>Night plan</h3>
+        <div class="day"><b>Aug 31</b>Keep it easy after the flight. Optional ROOF at Shanghai EDITION if energy is good.</div>
+        <div class="day top-pick"><b>Sep 1 · Priority night 📸</b><span class="tag photo">10/10 PHOTO</span> FLAIR at Ritz-Carlton Pudong before sunset → Sir Elly’s or VUE for the reverse skyline view. <span class="tag night">OPTIONAL CLUB</span> INS or Roam afterward.</div>
+        <div class="day"><b>Sep 12 · Saturday</b>If flight timing allows: C-PARK for underground energy or INS for a big commercial night.</div>
+      </div>
+    </details>
+
+    <details class="card details">
+      <summary><div class="city-dot">⛰️</div><div class="summary-copy"><b>Zhangjiajie</b><small>Sep 2–4 · Avatar mountains</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>Quartz-sandstone towers, mist, forest, skywalks and dramatic engineering. Prioritize scenery and sunsets over urban nightlife.</p>
+        <h3>Daytime</h3><div class="day"><b>Sep 2</b>Fly Shanghai → Zhangjiajie → hotel → sunset viewpoint / 72 Strange Buildings.</div><div class="day"><b>Sep 3</b>National Forest Park → Yuanjiajie → Bailong Elevator.</div><div class="day"><b>Sep 4</b>Tianmen Mountain → Glass Skywalk → Grand Canyon Glass Bridge → drive to Furong.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Pullman Zhangjiajie / Jingwu Pullman</b><em>188 Gaoyun Road, Wulingyuan</em><br><a class="maps" href="https://maps.apple.com/?q=Pullman+Zhangjiajie" target="_blank">Open in Apple Maps ↗</a><p>Walkable Wulingyuan area; Charming Xiangxi cultural show is a good close-to-hotel evening backup.</p></div>
+        <h3>Top restaurants</h3><div class="place"><b>Mao’s Bistro · Specialty Dishes</b><em>Hunan cuisine · strong traveler ratings</em></div><div class="place"><b>Xiang Jian Tu Cai Guan</b><em>Local Hunan cooking · Wulingyuan</em></div><div class="place"><b>Wei Xiang Yuan Shi Fu</b><em>Private-home style local cuisine</em></div>
+        <h3>Night plan</h3><div class="day"><b>Sep 2</b>72 Strange Buildings first. Optional late club: S·π PLUS or 12BEAST LAB.</div><div class="day top-pick"><b>Sep 3 · Mountain sunset 📸</b><span class="tag photo">PRIORITY</span> Wowza Bistro rooftop before sunset. Yoba Roof Pub is a backup.</div><div class="day"><b>Sep 4</b>No club: Furong night photography wins.</div>
+      </div>
+    </details>
+
+    <details class="card details">
+      <summary><div class="city-dot">💦</div><div class="summary-copy"><b>Furong Ancient Town</b><small>Sep 4–5 · waterfall night</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>A one-night photography stop: waterfalls, Tujia-style stilt houses and a dramatically illuminated old town.</p>
+        <h3>Plan</h3><div class="day"><b>Sep 4 evening</b>Arrive from Zhangjiajie → check in → photograph waterfall and stilt houses after dark.</div><div class="day"><b>Sep 5 morning</b>Walk the town again in softer light with fewer crowds → transfer for train to Chengdu.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Tea Xitai Holiday Hotel</b><em>Furong Ancient Town / bridge-waterfall area</em><br><a class="maps" href="https://maps.apple.com/?q=Furong+Ancient+Town+China" target="_blank">Open town in Apple Maps ↗</a><p>The must-do is literally outside: stay out after dark, then repeat early morning before day-trippers arrive.</p></div>
+        <h3>Food</h3><div class="place"><b>十二城餐厅</b><em>Highly rated Hunan cuisine</em></div><div class="place"><b>湘腊干菜馆</b><em>Local Hunan food</em></div><div class="place"><b>刘晓庆米豆腐店</b><em>Rice tofu · local quick bite</em></div>
+      </div>
+    </details>
+
+    <details class="card details">
+      <summary><div class="city-dot">🐼</div><div class="summary-copy"><b>Chengdu</b><small>Sep 5–7 · pandas + hotpot</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>Relaxed, food-obsessed, fashionable and one of the best nightlife cities on the route.</p>
+        <h3>Daytime</h3><div class="day"><b>Sep 5</b>Business Class high-speed train → hotel → Sichuan hotpot dinner.</div><div class="day"><b>Sep 6</b>Panda Research Base → Jinli Ancient Street → Gaiwan tea in People’s Park.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Crowne Plaza Chengdu City Center</b><em>31 Zongfu Street, Jinjiang District</em><br><a class="maps" href="https://maps.apple.com/?q=Crowne+Plaza+Chengdu+City+Center" target="_blank">Open in Apple Maps ↗</a><p><span class="tag hotel">GREAT LOCATION</span> Chunxi Road is essentially outside; IFS and Taikoo Li are an easy walk.</p></div>
+        <h3>Top restaurants</h3><div class="place top-pick"><b>Yu Zhi Lan</b><em>⭐⭐ Michelin · serious modern Sichuan</em></div><div class="place"><b>The Hall</b><em>⭐ Michelin · European technique + Sichuan influence</em></div><div class="place"><b>Shu JiuXiang Hotpot</b><em>Classic hotpot favorite</em></div><div class="place"><b>Xiaolongkan</b><em>Convenient classic Chengdu hotpot</em></div>
+        <h3>Night plan</h3><div class="day top-pick"><b>Sep 5 · Saturday</b><span class="tag photo">ROOFTOP</span> THE ROOFTOP at Niccolo/IFS → optional The Butterfly, Monster House or Pose Club.</div><div class="day"><b>Sep 6 · Sunday</b>Vantage XXVII at St. Regis for polished skyline drinks or SPARK at W Chengdu for more energy.</div>
+      </div>
+    </details>
+
+    <details class="card details">
+      <summary><div class="city-dot">🏯</div><div class="summary-copy"><b>Xi’an</b><small>Sep 7–10 · ancient capital</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>Ancient imperial China with a theatrical modern nightscape. Your hotel is in the Big Wild Goose Pagoda / Great Tang Mall zone.</p>
+        <h3>Daytime</h3><div class="day"><b>Sep 7</b>Train Chengdu → Xi’an → Muslim Quarter street-food evening.</div><div class="day"><b>Sep 8</b>Terracotta Warriors → Ancient City Wall → cycling.</div><div class="day"><b>Sep 9</b>Full-day Mount Huashan excursion.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Wyndham Grand Xi’an South</b><em>208 Ci’en East Road, Yanta District</em><br><a class="maps" href="https://maps.apple.com/?q=Wyndham+Grand+Xian+South" target="_blank">Open in Apple Maps ↗</a><p><span class="tag hotel">DON’T MISS</span> Great Tang All Day Mall / Datang Everbright City, Tang Paradise and Giant Wild Goose Pagoda are all close. Walk the illuminated district at night.</p></div>
+        <h3>Top restaurants</h3><div class="place"><b>Chang’an Da Pai Dang</b><em>Shaanxi specialties · theatrical local meal</em></div><div class="place"><b>Defachang</b><em>Famous dumpling institution</em></div><div class="place"><b>Xi’an Fanzhuang</b><em>Long-running regional favorite</em></div><div class="place"><b>S | PRIME1885</b><em>Steakhouse · useful break from Chinese food</em></div>
+        <h3>Night plan</h3><div class="day"><b>Sep 7</b>Muslim Quarter + Datang Everbright City near hotel.</div><div class="day top-pick"><b>Sep 8 · THE Xi’an night 📸</b><span class="tag photo">10/10 PHOTO</span> Siren Welkin / The Siren Bar for illuminated City Wall views. Optional electronic club afterward: Psyche, JAR or Nearwalllab.</div><div class="day"><b>Sep 9</b>After Huashan, stay easy: Great Tang Mall lights or relaxed Puyi/Xiangwan rooftop.</div>
+      </div>
+    </details>
+
+    <details class="card details">
+      <summary><div class="city-dot">🏛️</div><div class="summary-copy"><b>Beijing</b><small>Sep 10–12 · imperial + modern</small></div><span class="chev">⌄</span></summary>
+      <div class="inside">
+        <h3>City snapshot</h3><p>Imperial palaces and gardens by day; giant skyline and underground electronic culture by night.</p>
+        <h3>Daytime</h3><div class="day"><b>Sep 10</b>Business Class train Xi’an → Beijing → hotel → free afternoon.</div><div class="day"><b>Sep 11</b>Tiananmen Square → Forbidden City → Summer Palace.</div><div class="day"><b>Sep 12</b>Mutianyu Great Wall → Temple of Heaven → airport → Shanghai.</div>
+        <h3>Hotel + nearby</h3><div class="place"><b>Shangri-La Beijing</b><em>29 Zizhuyuan Road, Haidian District</em><br><a class="maps" href="https://maps.apple.com/?q=Shangri-La+Beijing" target="_blank">Open in Apple Maps ↗</a><p>Beijing Art Museum is very close; Purple Bamboo Park is an easy nearby option for the free Sep 10 afternoon.</p></div>
+        <h3>Top restaurants</h3><div class="place top-pick"><b>Chao Shang Chao</b><em>⭐⭐⭐ Michelin</em></div><div class="place"><b>Xin Rong Ji · Xinyuan South Road</b><em>⭐⭐⭐ Michelin · Taizhou cuisine</em></div><div class="place"><b>King’s Joy</b><em>⭐⭐ Michelin · plant-based Chinese fine dining</em></div><div class="place"><b>TRB Hutong</b><em>Destination dining in a historic setting</em></div><div class="place"><b>Da Dong</b><em>Modern Peking duck classic</em></div>
+        <h3>Night plan</h3><div class="day top-pick"><b>Sep 10 · Rooftop priority 📸</b><span class="tag photo">10/10 PHOTO</span> MO Bar at Mandarin Oriental Wangfujing for Forbidden City sunset. Atmosphere at China World Summit Wing is the futuristic alternative.</div><div class="day"><b>Sep 11 · Friday</b><span class="tag night">CLUB NIGHT</span> Groundless Factory for warehouse-style electronic music; Dada Beijing is another option if its Sep 11 event remains scheduled.</div><div class="day"><b>Sep 12</b>No Beijing club: Great Wall + Temple of Heaven + flight. Save energy for Shanghai.</div>
+      </div>
+    </details>
+
+    <div class="section-title" id="logistics">Flights · Trains · Hotels</div>
+    <div class="card logistics">
+      <details open><summary>✈️ International flights</summary><div class="body"><div class="day"><b>Aug 30–31 · Delta</b><span class="tag transport">TPA → LAX → PVG</span><br>Depart Tampa 7:00 AM · arrive Shanghai 4:05 PM Aug 31.</div><div class="day"><b>Sep 13 · Delta</b><span class="tag transport">PVG → DTW → TPA</span><br>Depart Shanghai 10:15 AM · scheduled Tampa arrival 4:40 PM.</div></div></details>
+      <details><summary>🛫 Domestic flights</summary><div class="body"><div class="day"><b>Sep 2</b>Shanghai → Zhangjiajie · Economy · exact times TBD.</div><div class="day"><b>Sep 12</b>Beijing → Shanghai after touring · Economy · exact times TBD.</div></div></details>
+      <details><summary>🚄 High-speed trains</summary><div class="body"><div class="day"><b>Sep 5</b>Zhangjiajie / Furong area → Chengdu · Business Class.</div><div class="day"><b>Sep 7</b>Chengdu → Xi’an · Business Class.</div><div class="day"><b>Sep 10</b>Xi’an → Beijing · Business Class.</div><p>Exact train numbers, stations and departure times are still to be added.</p></div></details>
+      <details><summary>🏨 Hotel sequence</summary><div class="body"><div class="day">Aug 31–Sep 2 · <b>Pullman Shanghai Jing An</b></div><div class="day">Sep 2–4 · <b>Pullman Zhangjiajie / Jingwu Pullman</b></div><div class="day">Sep 4–5 · <b>Tea Xitai Holiday Hotel · Furong</b></div><div class="day">Sep 5–7 · <b>Crowne Plaza Chengdu City Center</b></div><div class="day">Sep 7–10 · <b>Wyndham Grand Xi’an South</b></div><div class="day">Sep 10–12 · <b>Shangri-La Beijing</b> <em>(final checkout needs reconfirmation)</em></div><div class="day">Sep 12–13 · <b>Pullman Shanghai Jing An</b> per current itinerary.</div></div></details>
+    </div>
+
+    <div class="section-title" id="photos">📸 Best photo moments</div>
+    <div class="card pad">
+      <div class="place top-pick"><b>1 · FLAIR · Shanghai</b><em>Oriental Pearl + Bund at blue hour</em></div>
+      <div class="place"><b>2 · MO Bar · Beijing</b><em>Forbidden City sunset</em></div>
+      <div class="place"><b>3 · Siren Bar · Xi’an</b><em>Illuminated City Wall from above</em></div>
+      <div class="place"><b>4 · Wowza Bistro · Zhangjiajie</b><em>Avatar-style mountains at sunset</em></div>
+      <div class="place"><b>5 · Furong Ancient Town</b><em>Waterfall + stilt houses after dark</em></div>
+      <div class="place"><b>6 · Niccolo Rooftop · Chengdu</b><em>Taikoo Li / IFS lights</em></div>
+      <div class="place"><b>7 · Great Tang Mall · Xi’an</b><em>Illuminated pedestrian district</em></div>
+      <div class="place"><b>8 · Mutianyu Great Wall</b><em>Landscape finale</em></div>
+    </div>
+
+    <div class="card pad"><b>Public-share version</b><div class="privacy">This site intentionally excludes confirmation numbers, traveler names, ticket costs and other sensitive booking information.</div></div>
+    <div class="footer">China 2026 · mobile trip dashboard<br>Restaurant + nightlife plans should be rechecked shortly before each night.</div>
+  </main>
+</div>
+
+<nav class="bottom-nav"><div class="bar"><a href="#top"><span>🏠</span>Home</a><a href="#cities"><span>🗺️</span>Cities</a><a href="#logistics"><span>✈️</span>Travel</a><a href="#photos"><span>📸</span>Photos</a></div></nav>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const id=a.getAttribute('href');if(id&&id!=='#')document.querySelector(id)?.scrollIntoView({behavior:'smooth'});}));
+</script>
+</body>
+</html>
