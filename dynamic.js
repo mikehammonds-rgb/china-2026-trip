@@ -1,0 +1,37 @@
+(()=>{
+const hero=document.querySelector('.hero');
+if(!hero)return;
+const eyebrow=hero.querySelector('.eyebrow'),heroTitle=hero.querySelector('h1'),heroSub=hero.querySelector('p');
+const days={
+'2026-08-30':{day:1,city:'Travel Day',id:'logistics',image:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=86&w=1600',plan:'Tampa → Los Angeles → Shanghai · China begins now ✈️'},
+'2026-08-31':{day:2,city:'Shanghai',id:'shanghai',image:'https://images.unsplash.com/photo-1609153755058-a7cbbf264e9c?auto=format&fit=crop&q=86&w=1600',plan:'Arrive PVG 4:05 PM → Pullman Jing An → easy first evening'},
+'2026-09-01':{day:3,city:'Shanghai',id:'shanghai',image:'https://images.unsplash.com/photo-1609153755058-a7cbbf264e9c?auto=format&fit=crop&q=86&w=1600',plan:'Yuyuan → Oriental Pearl → Nanjing Road → Bund → FLAIR sunset'},
+'2026-09-02':{day:4,city:'Zhangjiajie',id:'zhangjiajie',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Zhangjiajie_at_dawn_1.jpg?width=1600',plan:'Fly to Zhangjiajie → 72 Strange Buildings'},
+'2026-09-03':{day:5,city:'Zhangjiajie',id:'zhangjiajie',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Zhangjiajie_at_dawn_1.jpg?width=1600',plan:'National Forest Park → Yuanjiajie → Bailong → Wowza sunset'},
+'2026-09-04':{day:6,city:'Furong',id:'furong',image:'https://epaper.voc.com.cn/hnrb/images/2025-12/11/T20/res03_attpic_brief.jpg',plan:'Tianmen + Glass Bridge → Furong waterfall after dark'},
+'2026-09-05':{day:7,city:'Chengdu',id:'chengdu',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Taikoo_Li_Chengdu_%26_Daci_Temple_at_Night.jpg?width=1600',plan:'Furong morning → Business Class HSR → hotpot → rooftop'},
+'2026-09-06':{day:8,city:'Chengdu',id:'chengdu',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Taikoo_Li_Chengdu_%26_Daci_Temple_at_Night.jpg?width=1600',plan:'Pandas → Jinli → People’s Park tea → skyline drinks'},
+'2026-09-07':{day:9,city:'Xi’an',id:'xian',image:'https://images.unsplash.com/photo-1780683558609-a27e0bbcb9ee?auto=format&fit=crop&q=86&w=1600',plan:'Business Class HSR → Muslim Quarter → Great Tang lights'},
+'2026-09-08':{day:10,city:'Xi’an',id:'xian',image:'https://images.unsplash.com/photo-1780683558609-a27e0bbcb9ee?auto=format&fit=crop&q=86&w=1600',plan:'Terracotta Warriors → City Wall → Siren rooftop 📸'},
+'2026-09-09':{day:11,city:'Xi’an',id:'xian',image:'https://images.unsplash.com/photo-1780683558609-a27e0bbcb9ee?auto=format&fit=crop&q=86&w=1600',plan:'Mount Huashan full-day adventure'},
+'2026-09-10':{day:12,city:'Beijing',id:'beijing',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunset_over_the_Forbidden_City.JPG?width=1600',plan:'Business Class HSR → free afternoon → MO Bar sunset'},
+'2026-09-11':{day:13,city:'Beijing',id:'beijing',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunset_over_the_Forbidden_City.JPG?width=1600',plan:'Tiananmen → Forbidden City → Summer Palace → Friday club night'},
+'2026-09-12':{day:14,city:'Beijing → Shanghai',id:'beijing',image:'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=86&w=1600',plan:'Mutianyu Great Wall → Temple of Heaven → fly Shanghai'},
+'2026-09-13':{day:15,city:'Shanghai → Home',id:'logistics',image:'https://images.unsplash.com/photo-1609153755058-a7cbbf264e9c?auto=format&fit=crop&q=86&w=1600',plan:'PVG 10:15 AM → Detroit → Tampa · home with a camera roll full of China'}
+};
+const n=new Date(),key=`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`,d=days[key];
+if(!d)return;
+hero.classList.add('trip-live');
+hero.style.backgroundImage=`linear-gradient(180deg,rgba(2,6,23,.06) 0%,rgba(2,6,23,.20) 42%,rgba(2,6,23,.9) 100%),url('${d.image}')`;
+eyebrow.textContent=`DAY ${d.day} · CHINA 2026`;
+heroTitle.textContent=d.city;
+heroSub.textContent=d.plan;
+const td=document.getElementById('todayDate'),ts=document.getElementById('todayStatus'),tt=document.getElementById('todayTitle'),tx=document.getElementById('todayText'),tl=document.getElementById('todayLink');
+if(td)td.textContent=`DAY ${d.day} · ${d.city.toUpperCase()}`;
+if(ts)ts.textContent='LIVE TRIP';
+if(tt)tt.textContent='Today’s game plan';
+if(tx)tx.textContent=d.plan;
+if(tl){tl.href='#'+d.id;tl.textContent=d.id==='logistics'?'Open travel details ↓':'Open today’s city ↓';}
+if(d.id!=='logistics')document.getElementById(d.id)?.setAttribute('open','');
+document.querySelectorAll('.chip').forEach(c=>{const match=c.getAttribute('href')==='#'+d.id;c.classList.toggle('active',match);if(match)c.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});});
+})();
