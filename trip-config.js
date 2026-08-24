@@ -34,22 +34,23 @@ window.TRIP_CONFIG={
     '2026-09-02':{title:'Zhangjiajie',cityId:'zhangjiajie',summary:'Fly to Zhangjiajie → 72 Strange Buildings → optional dancing'},
     '2026-09-03':{title:'Zhangjiajie',cityId:'zhangjiajie',summary:'National Forest Park → Yuanjiajie → Bailong → Wowza sunset'},
     '2026-09-04':{title:'Furong',cityId:'furong',summary:'Tianmen + Glass Bridge → Furong waterfall after dark'},
-    '2026-09-05':{title:'Chengdu',cityId:'chengdu',summary:'Furong morning → Business Class HSR → hotpot → rooftop → dancing'},
+    '2026-09-05':{title:'Chengdu',cityId:'chengdu',summary:'G2418 First Class · Zhangjiajie West 11:50 AM → Chengdu East 4:48 PM'},
     '2026-09-06':{title:'Chengdu',cityId:'chengdu',summary:'Pandas → Jinli → People’s Park tea → skyline drinks'},
-    '2026-09-07':{title:'Xi’an',cityId:'xian',summary:'Business Class HSR → Muslim Quarter → Great Tang lights'},
+    '2026-09-07':{title:'Xi’an',cityId:'xian',summary:'G3880 Business Class · Chengdu East 10:32 AM → Xi’an North 2:21 PM'},
     '2026-09-08':{title:'Xi’an',cityId:'xian',summary:'Terracotta Warriors → City Wall → Siren rooftop → Psyche'},
     '2026-09-09':{title:'Xi’an',cityId:'xian',summary:'Mount Huashan full-day adventure'},
-    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'Business Class HSR → free afternoon → MO Bar sunset'},
+    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'Xi’an North → Beijing West · estimated 12:04–4:32 PM · ticket pending'},
     '2026-09-11':{title:'Beijing',cityId:'beijing',summary:'Tiananmen → Forbidden City → Summer Palace → Friday club night'},
     '2026-09-12':{title:'Beijing → Shanghai',cityId:'beijing',summary:'Mutianyu Great Wall → Temple of Heaven → fly Shanghai'},
     '2026-09-13':{title:'Shanghai → Home',cityId:'travel',summary:'PVG 10:15 AM → Detroit → Tampa'}
   },
   hotels:{
-    shanghai:{name:'Pullman Shanghai Jing’an',brand:'ALL · Accor',mapQuery:'Pullman Shanghai Jing An',amenities:[['🏊','Pool'],['🏋️','24h Gym'],['🧖','Spa'],['♨️','Steam rooms'],['🍽️','Restaurant'],['🍸','Bar'],['🚇','Metro 50m']],note:'Downtown Jing’an; same property again for final Shanghai night.'},
-    zhangjiajie:{name:'Pullman Zhangjiajie',brand:'ALL · Accor',mapQuery:'Pullman Zhangjiajie Wulingyuan',amenities:[['🏊','Outdoor pool'],['🏋️','Fitness'],['🍽️','3 restaurants'],['🍸','Lobby bar'],['🥐','Breakfast'],['🅿️','Parking'],['🌿','Garden pool']],note:'Wulingyuan location with easy access to the National Forest Park.'},
-    chengdu:{name:'Crowne Plaza Chengdu City Center',brand:'IHG',mapQuery:'Crowne Plaza Chengdu City Center',amenities:[['🏊','Indoor heated pool'],['🏋️','Fitness'],['🧖','Spa'],['🍽️','Restaurant'],['🛜','Wi‑Fi'],['🚇','Metro walk'],['🚌','Panda shuttle']],note:'Central CBD near Taikoo Li / IFS.'},
-    xian:{name:'Wyndham Grand Xi’an South',brand:'Wyndham Grand',mapQuery:'Wyndham Grand Xian South',amenities:[['🏊','Indoor pool*'],['🏋️','Gym*'],['🧖','Spa'],['♨️','Hot tub'],['🍽️','Restaurant'],['🍸','Bar'],['🧺','Laundry']],note:'Near Great Tang All Day Mall. Verify pool/gym operating status at check-in.'},
-    beijing:{name:'Shangri-La Beijing',brand:'Shangri-La',mapQuery:'Shangri-La Beijing Zizhuyuan Road',amenities:[['🏊','25m indoor pool'],['🏋️','Fitness'],['🧖','CHI Spa'],['♨️','Whirlpool'],['🧘','Yoga / Pilates'],['☀️','Sun deck']],note:'Health Club includes indoor pool, whirlpool, fitness and classes.'}
+    shanghai:{name:'Pullman Shanghai Jing An',rating:'5-Star',dates:'Aug 31, Sep 1 & Sep 12',address:"No. 330 Meiyuan Road, Jing’an District, Shanghai, 200070, China",mapQuery:'Pullman Shanghai Jing An',amenities:[['🏊','Pool'],['🏋️','24h Gym'],['🧖','Spa'],['♨️','Steam rooms'],['🍽️','Restaurant'],['🍸','Bar'],['🚇','Metro 50m']],note:'Downtown Jing’an; same property again for final Shanghai night.'},
+    zhangjiajie:{name:'Zhangjiajie Jingwu Pullman Hotel',rating:'5-Star',dates:'Sep 2–3',address:'No. 188 Gaoyun Road, Wulingyuan National Scenic Spot District, Zhangjiajie',mapQuery:'Zhangjiajie Jingwu Pullman Hotel',amenities:[['🏊','Outdoor pool'],['🏋️','Fitness'],['🍽️','Restaurants'],['🍸','Lobby bar'],['🥐','Breakfast'],['🅿️','Parking'],['🌿','Garden pool']],note:'Wulingyuan location with easy access to the National Forest Park.'},
+    furong:{name:'Tea Xitai Holiday Hotel in Furong Town',rating:'5-Star',dates:'Sep 4',address:'Bridge in Furong Town, Henan Village, Hongshilin Town, Guzhang',mapQuery:'Tea Xitai Holiday Hotel Furong Town',amenities:[['🥐','Breakfast'],['🌊','Waterfall town'],['📸','Night views']],note:'One-night Furong Ancient Town stay.'},
+    chengdu:{name:'Crowne Plaza Chengdu',rating:'5-Star',dates:'Sep 5–6',address:'No. 31 Zongfu Street, Jinjiang District, Chengdu',mapQuery:'Crowne Plaza Chengdu 31 Zongfu Street',amenities:[['🏊','Indoor pool'],['🏋️','Fitness'],['🧖','Spa'],['🍽️','Restaurant'],['🛜','Wi‑Fi']],note:'Central Jinjiang District base.'},
+    xian:{name:'Wyndham Grand Xi’an',rating:'5-Star',dates:'Sep 7–9',address:"208 Ci’en East Road, Yanta District, Xi’an",mapQuery:'Wyndham Grand Xian 208 Cien East Road',amenities:[['🏊','Indoor pool*'],['🏋️','Gym*'],['🧖','Spa'],['♨️','Hot tub'],['🍽️','Restaurant'],['🍸','Bar'],['🧺','Laundry']],note:'Near Great Tang All Day Mall. Verify pool/gym operating status at check-in.'},
+    beijing:{name:'Shangri-La Beijing',rating:'5-Star',dates:'Sep 10–11',address:'No. 29 Zizhuyuan Road, Haidian District, Beijing, 100089, China',mapQuery:'Shangri-La Beijing Zizhuyuan Road',amenities:[['🏊','25m indoor pool'],['🏋️','Fitness'],['🧖','CHI Spa'],['♨️','Whirlpool'],['🧘','Yoga / Pilates'],['☀️','Sun deck']],note:'Two-night Beijing base before the flight back to Shanghai.'}
   },
   support:{
     title:'Chengdu Into International Travel Service Co., Ltd',
