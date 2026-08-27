@@ -1,9 +1,19 @@
 {
-  "name": "China 2026 Trip Dashboard",
-  "short_name": "China 2026",
-  "start_url": "./",
+  "name": "China 2026 Command Center",
+  "short_name": "China Trip",
+  "description": "Offline-ready flights, trains, hotels, cities and trip support for China 2026.",
+  "start_url": "/?source=home-screen",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f6f7fb",
-  "theme_color": "#0f172a",
-  "description": "Mobile-first China 2026 trip dashboard"
+  "background_color": "#08111f",
+  "theme_color": "#08111f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
