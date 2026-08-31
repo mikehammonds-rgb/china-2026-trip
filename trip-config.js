@@ -6,26 +6,10 @@ window.TRIP_CONFIG={
     features:{hungry:true,instagram:true,nightlife:true,photoSharing:true,dayAtGlance:true,hotelAmenities:true,support:true}
   },
   trip:{
-    id:'china-2026',
-    title:'China 2026',
-    eyebrow:"MIKE'S CHINA 2026 · AUG 30 — SEP 13",
-    headline:'China Command Center 🇨🇳',
-    subtitle:'Four travelers. Six incredible stops. One pocket guide for the entire adventure.',
-    start:'2026-08-30T00:00:00-04:00',
-    end:'2026-09-13T23:59:59-04:00',
-    homeTimeZone:'America/New_York',
-    destinationCountry:'China',
-    currency:'CNY',
-    travelers:4,
-    sharedPhotosUrl:'https://join.photocircleapp.com/541C88E52A'
+    id:'china-2026',title:'China 2026',eyebrow:"MIKE'S CHINA 2026 · AUG 30 — SEP 13",headline:'China Command Center 🇨🇳',subtitle:'Four travelers. Six incredible stops. One pocket guide for the entire adventure.',start:'2026-08-30T00:00:00-04:00',end:'2026-09-13T23:59:59-04:00',homeTimeZone:'America/New_York',destinationCountry:'China',currency:'CNY',travelers:4,sharedPhotosUrl:'https://join.photocircleapp.com/541C88E52A'
   },
   route:[
-    {id:'shanghai',name:'Shanghai',icon:'🌃',dates:'Aug 31–Sep 2 · return Sep 12'},
-    {id:'zhangjiajie',name:'Zhangjiajie',icon:'⛰️',dates:'Sep 2–4 · Avatar mountains'},
-    {id:'furong',name:'Furong Ancient Town',icon:'💦',dates:'Sep 4–5 · waterfall village'},
-    {id:'chengdu',name:'Chengdu',icon:'🐼',dates:'Sep 5–7 · pandas + hotpot'},
-    {id:'xian',name:'Xi’an',icon:'🏯',dates:'Sep 7–10 · walls + warriors'},
-    {id:'beijing',name:'Beijing',icon:'🏛️',dates:'Sep 10–12 · imperial finale'}
+    {id:'shanghai',name:'Shanghai',icon:'🌃',dates:'Aug 31–Sep 2 · return Sep 12'},{id:'zhangjiajie',name:'Zhangjiajie',icon:'⛰️',dates:'Sep 2–4 · Avatar mountains'},{id:'furong',name:'Furong Ancient Town',icon:'💦',dates:'Sep 4–5 · waterfall village'},{id:'chengdu',name:'Chengdu',icon:'🐼',dates:'Sep 5–7 · pandas + hotpot'},{id:'xian',name:'Xi’an',icon:'🏯',dates:'Sep 7–10 · walls + warriors'},{id:'beijing',name:'Beijing',icon:'🏛️',dates:'Sep 10–12 · imperial finale'}
   ],
   days:{
     '2026-08-30':{title:'Travel Day',cityId:'travel',summary:'Tampa → Los Angeles → Shanghai · China begins now ✈️'},
@@ -39,7 +23,7 @@ window.TRIP_CONFIG={
     '2026-09-07':{title:'Xi’an',cityId:'xian',summary:'G3880 Business Class · Chengdu East 10:32 AM → Xi’an North 2:21 PM'},
     '2026-09-08':{title:'Xi’an',cityId:'xian',summary:'Terracotta Warriors → City Wall → Siren rooftop → Psyche'},
     '2026-09-09':{title:'Xi’an',cityId:'xian',summary:'Mount Huashan full-day adventure'},
-    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'Xi’an North → Beijing West · estimated 12:04–4:32 PM · ticket pending'},
+    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'Business Class · Xi’an North 10:39 AM → Beijing West 4:19 PM · Checkpoint 12A · Car 01'},
     '2026-09-11':{title:'Beijing',cityId:'beijing',summary:'Tiananmen → Forbidden City → Summer Palace → Friday club night'},
     '2026-09-12':{title:'Beijing → Shanghai',cityId:'beijing',summary:'Mutianyu Great Wall → Temple of Heaven → fly Shanghai'},
     '2026-09-13':{title:'Shanghai → Home',cityId:'travel',summary:'PVG 10:15 AM → Detroit → Tampa'}
@@ -52,12 +36,5 @@ window.TRIP_CONFIG={
     xian:{name:'Wyndham Grand Xi’an',rating:'5-Star',dates:'Sep 7–9',address:"208 Ci’en East Road, Yanta District, Xi’an",mapQuery:'Wyndham Grand Xian 208 Cien East Road',amenities:[['🏊','Indoor pool*'],['🏋️','Gym*'],['🧖','Spa'],['♨️','Hot tub'],['🍽️','Restaurant'],['🍸','Bar'],['🧺','Laundry']],note:'Near Great Tang All Day Mall. Verify pool/gym operating status at check-in.'},
     beijing:{name:'Shangri-La Beijing',rating:'5-Star',dates:'Sep 10–11',address:'No. 29 Zizhuyuan Road, Haidian District, Beijing, 100089, China',mapQuery:'Shangri-La Beijing Zizhuyuan Road',amenities:[['🏊','25m indoor pool'],['🏋️','Fitness'],['🧖','CHI Spa'],['♨️','Whirlpool'],['🧘','Yoga / Pilates'],['☀️','Sun deck']],note:'Two-night Beijing base before the flight back to Shanghai.'}
   },
-  support:{
-    title:'Chengdu Into International Travel Service Co., Ltd',
-    representative:'Su Huaiqiong',
-    phones:[{label:'Mobile',number:'+86150008461577',display:'+86 150 00846 1577'},{label:'Office 1',number:'+862861812315',display:'+86 28 6181 2315'},{label:'Office 2',number:'+862885577169',display:'+86 28 8557 7169'}],
-    certificate:'L-SC-301961',
-    address:'No.1205, 16/F, Unit 2, Building 1, No.13 Changyi Road, Wuhou District, Chengdu, China',
-    documentUrl:'https://drive.google.com/file/d/1WSu_bpepsbWZoUjLtA2aAqyJG87YvaQf/view'
-  }
+  support:{title:'Chengdu Into International Travel Service Co., Ltd',representative:'Su Huaiqiong',phones:[{label:'Mobile',number:'+86150008461577',display:'+86 150 00846 1577'},{label:'Office 1',number:'+862861812315',display:'+86 28 6181 2315'},{label:'Office 2',number:'+862885577169',display:'+86 28 8557 7169'}],certificate:'L-SC-301961',address:'No.1205, 16/F, Unit 2, Building 1, No.13 Changyi Road, Wuhou District, Chengdu, China',documentUrl:'https://drive.google.com/file/d/1WSu_bpepsbWZoUjLtA2aAqyJG87YvaQf/view'}
 };
