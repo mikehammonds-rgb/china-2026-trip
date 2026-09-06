@@ -11,7 +11,7 @@ const timeline=[
  {date:'SEP 7',title:'Chengdu → Xi’an',city:'Xi’an',transport:'🚄 G3880 · Chengdu East 10:32 AM → Xi’an North 2:21 PM · Business Class · Checkpoint A13 · Car 08 · Seats 01A, 01F, 02A, 02F',hotel:'Wyndham Grand Xi’an · night 1 of 3'},
  {date:'SEP 8',title:'Xi’an',city:'Xi’an',transport:'🚘 Terracotta Warriors → Xi’an City Wall → cycling experience',hotel:'Wyndham Grand Xi’an · night 2 of 3'},
  {date:'SEP 9',title:'Xi’an',city:'Xi’an',transport:'🚘 Mount Huashan day trip · return to Xi’an',hotel:'Wyndham Grand Xi’an · night 3 of 3'},
- {date:'SEP 10',title:'Xi’an → Beijing',city:'Beijing',transport:'🚄 Xi’an North 10:39 AM → Beijing West 4:19 PM · Business Class · Checkpoint 12A · Car 01 · Seats 03A, 03C, 04A, 04C',hotel:'Shangri-La Beijing · night 1 of 2'},
+ {date:'SEP 10',title:'Xi’an → Beijing',city:'Beijing',transport:'🚄 G56 · Xi’an North 10:39 AM → Beijing West 4:19 PM · Business Class · Checkpoint 12A · Car 01 · Seats 03A, 03C, 04A, 04C',hotel:'Shangri-La Beijing · night 1 of 2'},
  {date:'SEP 11',title:'Beijing',city:'Beijing',transport:'🚘 Tiananmen Square → Forbidden City → Summer Palace',hotel:'Shangri-La Beijing · night 2 of 2'},
  {date:'SEP 12',title:'Beijing → Shanghai',city:'Shanghai',transport:'🚘 Mutianyu Great Wall → Temple of Heaven → airport · ✈️ MU5124 · PEK T2 7:00 PM → SHA T2 9:20 PM · Economy · 20 kg checked',hotel:'Pullman Shanghai Jing An · night 3 of 3'},
  {date:'SEP 13',title:'Shanghai → Detroit → Tampa',city:'Return home',transport:'✈️ Delta · depart Shanghai Pudong 10:15 AM · connect in Detroit · Tampa arrival scheduled 4:40 PM',hotel:'Trip complete'}

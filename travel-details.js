@@ -12,7 +12,7 @@ const flightData={
 const trainData=[
  {date:'SEP 5',title:'Zhangjiajie West → Chengdu East',number:'G2418',time:'11:50 AM → 4:48 PM',class:'First Class',gate:'2nd Floor',carriage:'Carriage 05',seats:'13C · 13D · 13A · 13F',status:'CONFIRMED',notes:['Private transfer from Furong to Zhangjiajie West and station pickup in Chengdu are included','First Class replaces the originally planned Business Class because Business Class availability is limited']},
  {date:'SEP 7',title:'Chengdu East → Xi’an North',number:'G3880',time:'10:32 AM → 2:21 PM',class:'Business Class',gate:'A13',carriage:'Carriage 08',seats:'01A · 01F · 02A · 02F',status:'CONFIRMED',notes:['Private station drop-off and pickup are included','Recommended free time after arrival: Muslim Quarter street-food tour']},
- {date:'SEP 10',title:'Xi’an North → Beijing West',number:'Train number not provided',time:'10:39 AM → 4:19 PM',class:'Business Class',gate:'12A',carriage:'Carriage 01',seats:'03A · 03C · 04A · 04C',status:'CONFIRMED',notes:['Confirmed ticket details updated from the issued tickets','Four Business Class seats are in Carriage 01']}
+ {date:'SEP 10',title:'Xi’an North → Beijing West',number:'G56',time:'10:39 AM → 4:19 PM',class:'Business Class',gate:'12A',carriage:'Carriage 01',seats:'03A · 03C · 04A · 04C',status:'CONFIRMED',notes:['Confirmed ticket details updated from the issued tickets','Four Business Class seats are in Carriage 01']}
 ];
 const hotelData=[
  {city:'Shanghai',name:'Pullman Shanghai Jing An',dates:'Aug 31 · Sep 1 · Sep 12',rating:'5-Star',address:"No. 330 Meiyuan Road, Jing’an District, Shanghai, 200070, China",map:'Pullman Shanghai Jing An'},

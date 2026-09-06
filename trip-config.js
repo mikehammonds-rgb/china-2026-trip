@@ -23,7 +23,7 @@ window.TRIP_CONFIG={
     '2026-09-07':{title:'Xi’an',cityId:'xian',summary:'G3880 Business Class · Chengdu East 10:32 AM → Xi’an North 2:21 PM'},
     '2026-09-08':{title:'Xi’an',cityId:'xian',summary:'Terracotta Warriors → City Wall → Siren rooftop → Psyche'},
     '2026-09-09':{title:'Xi’an',cityId:'xian',summary:'Mount Huashan full-day adventure'},
-    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'Business Class · Xi’an North 10:39 AM → Beijing West 4:19 PM · Checkpoint 12A · Car 01'},
+    '2026-09-10':{title:'Beijing',cityId:'beijing',summary:'G56 Business Class · Xi’an North 10:39 AM → Beijing West 4:19 PM · Checkpoint 12A · Car 01'},
     '2026-09-11':{title:'Beijing',cityId:'beijing',summary:'Tiananmen → Forbidden City → Summer Palace → Friday club night'},
     '2026-09-12':{title:'Beijing → Shanghai',cityId:'beijing',summary:'Mutianyu Great Wall → Temple of Heaven → fly Shanghai'},
     '2026-09-13':{title:'Shanghai → Home',cityId:'travel',summary:'PVG 10:15 AM → Detroit → Tampa'}

@@ -1,5 +1,5 @@
 (()=>{
-const BUILD='20260906-1';
+const BUILD='20260906-2';
 function styles(){if(document.getElementById('offlineStyles'))return;const style=document.createElement('style');style.id='offlineStyles';style.textContent=`
 .offline-status{margin:12px 0 2px;padding:11px 12px;border-radius:16px;background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(14,165,233,.08));border:1px solid rgba(52,211,153,.2);display:flex;align-items:center;gap:10px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
 .offline-status-dot{width:10px;height:10px;flex:0 0 10px;border-radius:50%;background:#fbbf24;box-shadow:0 0 14px rgba(251,191,36,.65)}.offline-status.ready .offline-status-dot{background:#34d399;box-shadow:0 0 14px rgba(52,211,153,.65)}.offline-status.offline .offline-status-dot{background:#60a5fa;box-shadow:0 0 14px rgba(96,165,250,.7)}

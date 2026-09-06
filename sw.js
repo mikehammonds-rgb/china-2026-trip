@@ -1,4 +1,4 @@
-const VERSION='20260906-1';
+const VERSION='20260906-2';
 const CACHE_NAME=`china-command-center-${VERSION}`;
 const META_URL='/__offline-status__';
 const CORE_FILES=[
