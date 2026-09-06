@@ -2,6 +2,11 @@
 
 Mobile-first travel dashboard for the China 2026 trip.
 
+## Maintainer maps
+
+- [`SITEMAP.md`](SITEMAP.md): required module map, data-impact matrix and update workflow.
+- [`TRIP_SCHEMA.md`](TRIP_SCHEMA.md): reusable data architecture and migration plan.
+
 ## Design goals
 - Fast, thumb-friendly mobile interface
 - Collapsible city sections
