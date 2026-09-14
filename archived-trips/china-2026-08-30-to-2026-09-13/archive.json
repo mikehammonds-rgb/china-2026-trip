@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "china-2026",
+  "title": "China 2026",
+  "location": "China",
+  "start": "2026-08-30",
+  "end": "2026-09-13",
+  "status": "archived",
+  "privacy": "share-safe",
+  "sourceCommit": "0bdc30e875154a2e2dff84210c81ad6201e732f7",
+  "preservation": "Frozen final dashboard package"
+}

@@ -1,19 +1,24 @@
-# China 2026 Trip Dashboard
+# Travel Command Center
 
-Mobile-first travel dashboard for the China 2026 trip.
+A mobile-first, offline-ready dashboard that displays one upcoming or active trip and preserves completed journeys in a browsable archive.
 
-## Maintainer maps
+## Repository structure
 
-- [`SITEMAP.md`](SITEMAP.md): required module map, data-impact matrix and update workflow.
-- [`TRIP_SCHEMA.md`](TRIP_SCHEMA.md): reusable data architecture and migration plan.
+- `index.html`, `app.js`, `app.css`: reusable dashboard engine
+- `data/active-trip.js`: the one trip currently displayed by default
+- `data/archive-index.js`: share-safe index of completed trips
+- `trip-template/trip.js`: normalized plug-and-play trip template
+- `archived-trips/<location>-<dates>/`: immutable final trip packages
+- `api/`: destination-independent weather, restaurant, and spa services
 
-## Design goals
-- Fast, thumb-friendly mobile interface
-- Collapsible city sections
-- Daytime itinerary + restaurants + rooftop bars + nightlife
-- Expandable flights, trains and hotel sequence
-- Nearby hotel recommendations
-- Public-share safe: no confirmation numbers, traveler names or booking costs
+## Loading a new trip
 
-## Publishing
-This repository is designed to be served as a static website from `index.html`, including via GitHub Pages.
+Send Dex the newest spreadsheet and any supporting files. Dex will normalize the itinerary, identify gaps, strip private booking information from the public build, update `data/active-trip.js`, validate the complete timeline, and deploy it.
+
+## Privacy
+
+The repository and deployed dashboard contain only share-safe information. Original spreadsheets and any confirmation, ticket, passport, payment, traveler, or loyalty details are private inputs and must not be committed.
+
+## Current state
+
+There is no active trip. China 2026 is preserved as the first archived journey.

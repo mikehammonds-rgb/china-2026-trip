@@ -1,105 +1,47 @@
-# Reusable Trip Dashboard Architecture
+# Travel Command Center trip schema
 
-The dashboard is being migrated from a China-specific static page into a reusable travel dashboard engine.
+The application has one reusable renderer and one active trip at a time. Trip facts live in `data/active-trip.js`; completed trips live in dated folders under `archived-trips/`.
 
-## Core rule
+## Intake workflow
 
-**UI code is reusable. Trip facts are data.**
+1. Receive the newest spreadsheet plus any supporting notes or documents.
+2. Treat every source file as private input.
+3. Normalize share-safe fields into the structure shown in `trip-template/trip.js`.
+4. Exclude confirmation numbers, ticket numbers, passport data, payment information, traveler legal names, loyalty numbers, and private document links.
+5. Validate dates, stop order, hotel nights, and transportation continuity.
+6. Replace `data/active-trip.js`, increment the service-worker build, test mobile/offline behavior, and deploy.
 
-A new trip should not require redesigning the dashboard. The normal workflow will be:
+The source spreadsheet can use any reasonable organization. Dex maps its fields into the normalized schema; the dashboard does not ingest private spreadsheets in the browser.
 
-1. Collect current trip documents.
-2. Convert them into the `TRIP_CONFIG` structure.
-3. Validate required fields and dates.
-4. Replace/update `trip-config.js`.
-5. Deploy.
-6. Verify mobile rendering and live integrations.
+## Required active-trip fields
 
-## Data domains
+- `id`: stable lowercase slug such as `italy-2027`
+- `title`
+- `start` and `end`: ISO `YYYY-MM-DD`
+- `cities`: at least one city with a stable `id`, name, and dates
 
-`trip-config.js` is the source of truth for trip-specific data.
+## Optional domains
 
-### `app`
-Reusable feature flags and visual defaults.
+- `days`: date-indexed daily summaries
+- `cities[].days`: detailed plans for each stop
+- `cities[].hotel`: share-safe hotel details and amenities
+- `cities[].highlights`, `nightlife`, and `photoSpots`
+- `transport`: flights, trains, transfers, rental cars, cruises, and stays
+- `timeline`: end-to-end ordered events
+- `support`: emergency, guide, tour operator, or local contacts
+- `sharedPhotosUrl`
+- `destinationLanguage`
 
-### `trip`
-Trip identity, dates, destination, traveler count, currency, time zone and shared-photo link.
+Missing optional domains are hidden automatically.
 
-### `route`
-Ordered destination/city sequence. Each stop gets a stable `id` used by all other modules.
+## Archive workflow
 
-### `days`
-Date-indexed day-at-a-glance records. Dates use ISO `YYYY-MM-DD` keys.
+When a trip ends:
 
-### `hotels`
-Hotel details keyed by city ID. Reservation IDs must remain private and should never be placed in the public config.
+1. Create `archived-trips/<location>-<start>-to-<end>/`.
+2. Preserve the final deployed trip package in that folder.
+3. Add its share-safe metadata to `data/archive-index.js`.
+4. Create an immutable Git tag named `trip/<trip-id>-final`.
+5. Set `data/active-trip.js` back to `null` until the next trip is ready.
 
-### `support`
-Tour operator / local support contacts and links to share-safe documents.
-
-## Planned modules
-
-The reusable renderer will support these optional domains as migration continues:
-
-- `cities`: overview, hero image, daytime plans and nearby must-see items
-- `restaurants`: curated destination dining recommendations
-- `nightlife`: rooftop bars, lounges and dancing options
-- `instagram`: photo spots, directions and photo references
-- `flights`: expandable flight segments
-- `trains`: expandable rail segments
-- `transfers`: drivers, pickups and intercity transfers
-- `hotels`: amenities, location and nearby suggestions
-- `support`: tour company and emergency/local contacts
-- `documents`: share-safe links to contracts and useful trip documents
-- `sharedPhotos`: provider-agnostic photo-sharing link
-
-## Live services
-
-Live services remain reusable and independent of destination data:
-
-- **Hungry**: device GPS → Vercel serverless API → Google Places (New)
-- Maps links: generated from coordinates or destination names
-- Device geolocation: browser permission only; no location is persisted by the dashboard
-
-Secrets such as Google API keys belong only in Vercel environment variables.
-
-## Public vs private data
-
-The dashboard is shareable. Do not publish:
-
-- airline/hotel confirmation numbers
-- passport details
-- traveler legal names unless explicitly intended
-- ticket numbers
-- payment information
-- private API keys
-
-Those may exist in source travel documents but should be stripped during ingestion.
-
-## New-trip migration checklist
-
-When creating a new trip:
-
-- Set trip title, dates, country/countries, currency and traveler count.
-- Replace the route array.
-- Build day records from the latest itinerary only.
-- Add locked hotels and amenities.
-- Add flights, trains and transfers.
-- Add curated restaurants and nightlife.
-- Generate Instagram/photo spots.
-- Set the photo-sharing provider URL if used.
-- Add tour-company/support contacts.
-- Run schema validation.
-- Test Hungry from a mobile device.
-- Verify every external link.
-- Deploy and smoke-test production.
-
-## Migration status
-
-Phase 1: reusable data layer introduced without replacing the working China UI.
-
-Phase 2: renderer reads identity, dates, route, hotels, day-at-a-glance and support from `TRIP_CONFIG`.
-
-Phase 3: move city content, nightlife, restaurants and Instagram spots out of HTML into data.
-
-Phase 4: reduce `index.html` to a reusable application shell and make new trips data-only deployments.
+Archive folders are public and share-safe. Private source spreadsheets and booking identifiers never enter Git or the deployed site.

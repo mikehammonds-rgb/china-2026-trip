@@ -1,0 +1,6 @@
+.DS_Store
+.vercel
+private-trip-input/
+*.private.xlsx
+*.private.csv
+*.private.json

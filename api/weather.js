@@ -13,9 +13,22 @@ export default async function handler(req,res){
   if(req.method==='OPTIONS')return res.status(204).end();
   if(req.method!=='GET')return res.status(405).json({error:'Method not allowed'});
 
-  const id=String(req.query.city||'').toLowerCase();
-  const city=CITIES[id];
-  if(!city)return res.status(400).json({error:'Unknown city'});
+  const requested=String(req.query.city||'').trim();
+  const id=requested.toLowerCase().replace(/[^a-z0-9]+/g,'');
+  let city=CITIES[id];
+  const suppliedLat=Number(req.query.lat),suppliedLng=Number(req.query.lng);
+  if(Number.isFinite(suppliedLat)&&Number.isFinite(suppliedLng)&&Math.abs(suppliedLat)<=90&&Math.abs(suppliedLng)<=180){
+    city={name:requested||'Current destination',lat:suppliedLat,lng:suppliedLng};
+  }
+
+  if(!city&&requested){
+    try{
+      const lookup=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(requested)}&count=1&language=en&format=json`);
+      const match=(await lookup.json())?.results?.[0];
+      if(match)city={name:[match.name,match.country].filter(Boolean).join(', '),lat:match.latitude,lng:match.longitude};
+    }catch{}
+  }
+  if(!city)return res.status(400).json({error:'City name or valid coordinates required'});
 
   const params=new URLSearchParams({
     latitude:String(city.lat),
