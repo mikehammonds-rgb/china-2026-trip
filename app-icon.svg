@@ -1,9 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Travel Command Center">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102a49"/><stop offset=".52" stop-color="#6746d7"/><stop offset="1" stop-color="#ed4b9e"/></linearGradient>
-    <filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".3"/></filter>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a35"/><stop offset=".5" stop-color="#0b4f7e"/><stop offset="1" stop-color="#13a9ab"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe498"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#031225" flood-opacity=".42"/></filter>
   </defs>
-  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
-  <path d="M87 333c60-58 117-91 170-99 47-8 102 5 168 40" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="20" stroke-linecap="round"/>
-  <path d="m273 79 38 92 104 49-20 37-106-28-17 130 43 36-12 25-70-30-70 30-12-25 43-36-17-130-106 28-20-37 104-49 38-92c9-22 20-34 39-34s30 12 39 34Z" fill="#fff" filter="url(#s)"/>
+  <rect width="512" height="512" rx="112" fill="url(#sky)"/>
+  <circle cx="256" cy="256" r="186" fill="none" stroke="#b9f5ef" stroke-opacity=".22" stroke-width="10"/>
+  <path d="M130 305c52-70 107-86 157-57 32 19 64 14 104-20" fill="none" stroke="#d8fffb" stroke-opacity=".72" stroke-width="12" stroke-linecap="round" stroke-dasharray="6 20"/>
+  <path d="M147 149l42 20-15 16 38 31-13 14-47-23-25 4-7-9 15-14-10-34z" fill="#fff" filter="url(#shadow)"/>
+  <path d="M153 329h207l-20 28H174z" fill="url(#gold)" filter="url(#shadow)"/>
+  <path d="M194 311h115l31 18H165z" fill="#f8fbff"/>
+  <path d="M208 286h85l16 25H192z" fill="#153b5a"/>
+  <path d="M221 291h20v15h-20zm29 0h20v15h-20zm29 0h13l9 15h-22z" fill="#7ed7e0"/>
+  <path d="M191 365c23 13 45 13 65 0 20 13 42 13 65 0" fill="none" stroke="#d8fffb" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="384" cy="136" r="42" fill="#ffffff" fill-opacity=".13"/>
+  <path d="m384 104 9 23 23 9-23 9-9 23-9-23-23-9 23-9z" fill="url(#gold)"/>
 </svg>

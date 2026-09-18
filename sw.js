@@ -1,4 +1,4 @@
-const VERSION='20260918-1';
+const VERSION='20260918-2';
 const CACHE=`travel-command-center-${VERSION}`;
 const ARCHIVE='/archived-trips/china-2026-08-30-to-2026-09-13/';
 const CORE=[
@@ -7,6 +7,7 @@ const CORE=[
   '/app.css',
   '/app.js',
   '/app-icon.svg',
+  '/app-icon-180.png',
   '/manifest.webmanifest',
   '/data/active-trip.js',
   '/data/november-cruise.js',
