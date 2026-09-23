@@ -5,7 +5,7 @@ A mobile-first, offline-ready dashboard for **any kind of trip**. Upcoming trips
 ## Confirm the destination before editing
 
 - App: **Travel Command Center**
-- Source: `mikehammonds-rgb/china-2026-trip`
+- Source: `mikehammonds-rgb/travel-command-center`
 - Vercel project: `travel-command-center`
 - Production: https://mike-travel-command-center.vercel.app
 

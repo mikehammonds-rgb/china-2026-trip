@@ -32,4 +32,4 @@ Read this with `README.md` before changing trip content. The current root app is
 
 ## Publication boundary
 
-Publishing this app means the `mikehammonds-rgb/china-2026-trip` repository's `main` branch and the Vercel project `travel-command-center`. Club Royale Offer Compass is a separate app and repository. A Git push is not itself proof of deployment: check Vercel's deployment state and the live site.
+Publishing this app means the `mikehammonds-rgb/travel-command-center` repository's `main` branch and the Vercel project `travel-command-center`. Club Royale Offer Compass is a separate app and repository. A Git push is not itself proof of deployment: check Vercel's deployment state and the live site.
