@@ -26,6 +26,7 @@ The app renders multiple upcoming trips from one registry. Source modules are li
 - `transport`: flights, trains, transfers, cruises, and stays
 - `timeline`: ordered trip events
 - `phases` and `readiness`: chapters and planning checklist
+- `publicTravelParty`: owner-approved, intentionally public cruise reservation and traveler names, with optional `companions` entries for linked reservations. Only add verified names and numbers; do not infer full names from informal labels. All other private identifiers remain excluded.
 - `support`: public or share-safe contacts
 - `sharedPhotosUrl` and `destinationLanguage`
 

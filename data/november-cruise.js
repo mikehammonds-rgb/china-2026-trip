@@ -5,6 +5,7 @@ const trip={
  schemaVersion:1,id:'wonder-birthday-cruise-2026-11',title:'Wonder Birthday Cruise',headline:'Birthday at sea.',eyebrow:'NOV 26-30, 2026',
  subtitle:'Miami Beach, then three nights aboard Wonder of the Seas with Perfect Day and Nassau.',location:'Miami, CocoCay and Nassau',destinationLanguage:'English',start:'2026-11-26',end:'2026-11-30',tripIcon:'🚢',travelers:2,currency:'USD',
  heroImage:'https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=88&w=1600',phasesTitle:'Your cruise trip',quickPartsLabel:'Hotel, cruise and flight details',
+ publicTravelParty:{reservation:'9951558',names:['Michael Hammonds','Michael Hott'],companions:[{names:'Spring & Jon',reservation:'5160477',note:'Listed as companions on this sailing.'}]},
  phases:[
   {id:'miami',icon:'🌴',label:'PRE-CRUISE',title:'Miami Beach',dates:'Nov 26-27',summary:'Fly from Tampa and stay oceanfront at the adults-only Clevelander.',status:'Flight and hotel booked'},
   {id:'cruise',icon:'🚢',label:'SAILING',title:'Wonder of the Seas',dates:'Nov 27-30',summary:'Miami, Perfect Day at CocoCay, Nassau and back to Miami.',status:'Paid in full'},

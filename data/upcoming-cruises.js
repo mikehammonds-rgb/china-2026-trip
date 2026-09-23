@@ -1,5 +1,6 @@
 // Share-safe future cruise summaries derived from the previously reconciled
-// Royal Caribbean receipts. Keep private identifiers and payment data out.
+// Royal Caribbean receipts. Only owner-approved traveler names and cruise
+// reservation numbers are public; keep other private identifiers out.
 (()=>{
 const image='https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=88&w=1600';
 const cityImage='https://images.unsplash.com/photo-1688269910608-e3c65eb4ac3a?auto=format&fit=crop&q=86&w=1400';
@@ -8,6 +9,7 @@ const january={
  schemaVersion:1,id:'wonder-january-cruise-2027',title:'January Wonder Cruise',headline:'A January escape at sea.',eyebrow:'JAN 15–19, 2027',
  subtitle:'Four nights aboard Wonder of the Seas, sailing from Miami to the Bahamas and Perfect Day at CocoCay.',
  location:'Miami, Bahamas and Perfect Day at CocoCay',destinationLanguage:'English',start:'2027-01-15',end:'2027-01-19',tripIcon:'🚢',travelers:2,currency:'USD',heroImage:image,
+ publicTravelParty:{reservation:'8305296',names:['Michael Hammonds','Michael Hott']},
  phasesTitle:'Your cruise trip',quickPartsLabel:'Cruise and planning details',
  phases:[{id:'cruise',icon:'🚢',label:'SAILING',title:'Wonder of the Seas',dates:'Jan 15–19',summary:'Four-night Bahamas and Perfect Day cruise, round-trip from Miami.',status:'Booked'}],
  readiness:[
@@ -29,6 +31,7 @@ const february={
  schemaVersion:1,id:'harmony-february-cruise-2027',title:'February Harmony Cruise',headline:'Five nights on Harmony.',eyebrow:'FEB 25–MAR 2, 2027',
  subtitle:'A Bahamas and Perfect Day sailing aboard Harmony of the Seas from Port Canaveral.',
  location:'Port Canaveral, Bahamas and Perfect Day at CocoCay',destinationLanguage:'English',start:'2027-02-25',end:'2027-03-02',tripIcon:'🚢',travelers:2,currency:'USD',heroImage:image,
+ publicTravelParty:{reservation:'2046831',names:['Michael Hammonds','Michael Hott'],companions:[{names:'Mom & Dad',reservation:'4725996',note:'Sailing on their own reservation; coordinate arrival at Port Canaveral.'}]},
  phasesTitle:'Your cruise trip',quickPartsLabel:'Cruise and planning details',
  phases:[{id:'cruise',icon:'🚢',label:'SAILING',title:'Harmony of the Seas',dates:'Feb 25–Mar 2',summary:'Five-night Bahamas and Perfect Day cruise, round-trip from Port Canaveral.',status:'Booked'}],
  readiness:[

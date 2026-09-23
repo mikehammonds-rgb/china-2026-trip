@@ -25,11 +25,11 @@ These identifiers are also recorded in `site.config.json`. If a request names an
 1. Confirm the app identity above and read `SITEMAP.md` and `TRIP_SCHEMA.md`.
 2. Reuse already-verified source details when available. Treat receipts, email, spreadsheets, and booking records as private inputs.
 3. Edit an existing source module, or add a new module and list it in `site.config.json`. Preserve other trips and use a stable, unique trip ID.
-4. Include only share-safe itinerary and planning details. Do not commit legal names, booking identifiers, loyalty IDs, private links, or payment details. Mark unknown plans as unknown instead of inventing them.
+4. Include only share-safe itinerary and planning details. The owner's explicit exception permits verified cruise traveler names and reservation numbers in `publicTravelParty`; do not commit other booking identifiers, loyalty IDs, private links, or payment details. Mark unknown plans as unknown instead of inventing them.
 5. Increment `version` in `site.config.json`, then run `node scripts/prepare-release.mjs` and `node scripts/check-release.mjs`. GitHub Actions repeats the release check on pull requests and `main` pushes.
 6. Compare the source tree with the current GitHub `main` before publishing. Publish one atomic commit; never force-push over newer work. The connected GitHub account can be used if terminal Git credentials lack write access.
 7. Confirm Vercel deployed that exact commit to the **travel-command-center** project, then check the live trip cards, expanded details, timeline, and offline refresh.
 
 ## Privacy note
 
-The repository is public even when a deployment requires Vercel sign-in. The validator blocks obvious private field names and identifier-shaped text. Existing price/payment wording is fingerprinted in `privacy-baseline.json` and reported as warnings; new or changed wording of that kind fails validation. The baseline is not an endorsement of those older details. It cannot prove that every free-text value is share-safe, so review warnings before publishing and do not add more without an explicit privacy decision.
+The repository is public even when a deployment requires Vercel sign-in. The validator blocks obvious private field names and identifier-shaped text, except the owner's explicit `publicTravelParty` cruise-name and reservation-number disclosure. Existing price/payment wording is fingerprinted in `privacy-baseline.json` and reported as warnings; new or changed wording of that kind fails validation. The baseline is not an endorsement of those older details. It cannot prove that every free-text value is share-safe, so review warnings before publishing and do not add more without an explicit privacy decision.

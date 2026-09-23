@@ -21,15 +21,17 @@ const iso=value=>{
   const date=new Date(`${value}T00:00:00Z`);
   return !Number.isNaN(date.valueOf())&&date.toISOString().slice(0,10)===value;
 };
-const forbiddenKey=/(confirmation|passport|ticket.?number|loyalty|payment|credit.?card|legal.?name|booking.?reference|record.?locator|pnr)/i;
+const forbiddenKey=/(confirmation|reservation|passport|ticket.?number|loyalty|payment|credit.?card|legal.?name|booking.?reference|record.?locator|pnr)/i;
+const approvedPublicReservation=/^publicTravelParty\.(?:reservation|companions\[\d+\]\.reservation)$/;
 const privateReference=/(?:confirmation|reservation|booking|ticket|passport|loyalty|crown\s*&\s*anchor)\s*(?:number|no\.?|#|code|id|:)\s*[:#-]?\s*[a-z0-9-]{5,}/i;
 const cardNumber=/\b(?:\d[ -]*?){13,19}\b/;
 function inspect(value,where,tripId,field=''){
   if(Array.isArray(value)){value.forEach((item,index)=>inspect(item,`${where}[${index}]`,tripId,`${field}[${index}]`));return}
   if(value&&typeof value==='object'){
     for(const [key,item] of Object.entries(value)){
-      if(forbiddenKey.test(key))errors.push(`${where}.${key}: private field name`);
-      inspect(item,`${where}.${key}`,tripId,field?`${field}.${key}`:key);
+      const nextField=field?`${field}.${key}`:key;
+      if(forbiddenKey.test(key)&&!approvedPublicReservation.test(nextField))errors.push(`${where}.${key}: private field name`);
+      inspect(item,`${where}.${key}`,tripId,nextField);
     }
     return;
   }

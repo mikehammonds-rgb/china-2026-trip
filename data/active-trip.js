@@ -1,5 +1,6 @@
 // Share-safe trip data assembled from the December cruise and ski-trip Gmail labels.
-// Private confirmation numbers, ticket numbers, loyalty IDs and payment details are omitted.
+// Only owner-approved cruise traveler names and reservation numbers are public.
+// Other confirmation numbers, ticket numbers, loyalty IDs and payment details are omitted.
 window.TRAVEL_COMMAND_CENTER_ACTIVE_TRIP={
   schemaVersion:1,
   id:'holiday-cruise-tahoe-2026',
@@ -13,6 +14,7 @@ window.TRAVEL_COMMAND_CENTER_ACTIVE_TRIP={
   end:'2027-01-02',
   heroImage:'https://images.unsplash.com/photo-1767688300025-987b2af2e57f?auto=format&fit=crop&q=88&w=1600',
   travelers:2,
+  publicTravelParty:{reservation:'9473667',names:['Michael Hammonds','Christine Tully']},
   currency:'USD',
   phases:[
     {
