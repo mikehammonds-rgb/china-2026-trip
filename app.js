@@ -1,5 +1,5 @@
 (()=>{
-const BUILD='20260923-1';
+const BUILD='20260923-2';
 const trips=Array.isArray(window.TRAVEL_COMMAND_CENTER_TRIPS)&&window.TRAVEL_COMMAND_CENTER_TRIPS.length?window.TRAVEL_COMMAND_CENTER_TRIPS:[window.TRAVEL_COMMAND_CENTER_ACTIVE_TRIP].filter(Boolean);
 const requestedTrip=new URLSearchParams(location.search).get('trip');
 const active=trips.find(trip=>trip.id===requestedTrip)||trips.slice().sort((a,b)=>a.start.localeCompare(b.start))[0];

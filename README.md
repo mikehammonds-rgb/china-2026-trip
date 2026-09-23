@@ -1,24 +1,35 @@
 # Travel Command Center
 
-A mobile-first, offline-ready dashboard that displays one upcoming or active trip and preserves completed journeys in a browsable archive.
+A mobile-first, offline-ready dashboard for **any kind of trip**. Upcoming trips appear together; completed journeys can be preserved in the archive. This is not the Club Royale Offer Compass, which is a separate cruise-offers app.
 
-## Repository structure
+## Confirm the destination before editing
 
-- `index.html`, `app.js`, `app.css`: reusable dashboard engine
-- `data/active-trip.js`: the one trip currently displayed by default
-- `data/archive-index.js`: share-safe index of completed trips
-- `trip-template/trip.js`: normalized plug-and-play trip template
-- `archived-trips/<location>-<dates>/`: immutable final trip packages
-- `api/`: destination-independent weather, restaurant, and spa services
+- App: **Travel Command Center**
+- Source: `mikehammonds-rgb/china-2026-trip`
+- Vercel project: `travel-command-center`
+- Production: https://mike-travel-command-center.vercel.app
 
-## Loading a new trip
+These identifiers are also recorded in `site.config.json`. If a request names another app, stop and locate that app first. Do not infer the target merely because the trip is a cruise. A follow-up such as “deploy” applies only to the app named and edited in the current task.
 
-Send Dex the newest spreadsheet and any supporting files. Dex will normalize the itinerary, identify gaps, strip private booking information from the public build, update `data/active-trip.js`, validate the complete timeline, and deploy it.
+## Current trips and files
 
-## Privacy
+- November 2026 Wonder birthday cruise: `data/november-cruise.js`
+- December 2026 holiday cruise + Tahoe: `data/active-trip.js`
+- January and February 2027 cruises: `data/upcoming-cruises.js`
+- China 2026: `archived-trips/china-2026-08-30-to-2026-09-13/`
 
-The repository and deployed dashboard contain only share-safe information. Original spreadsheets and any confirmation, ticket, passport, payment, traveler, or loyalty details are private inputs and must not be committed.
+`site.config.json` lists the ordered source modules and one release version. `scripts/prepare-release.mjs` assembles them into `data/trips.js` and synchronizes the page and service-worker versions. Edit the source modules, not the generated bundle. `app.js` renders the trips; `sw.js` caches the bundle for offline use.
 
-## Current state
+## Add or update a trip
 
-There is no active trip. China 2026 is preserved as the first archived journey.
+1. Confirm the app identity above and read `SITEMAP.md` and `TRIP_SCHEMA.md`.
+2. Reuse already-verified source details when available. Treat receipts, email, spreadsheets, and booking records as private inputs.
+3. Edit an existing source module, or add a new module and list it in `site.config.json`. Preserve other trips and use a stable, unique trip ID.
+4. Include only share-safe itinerary and planning details. Do not commit legal names, booking identifiers, loyalty IDs, private links, or payment details. Mark unknown plans as unknown instead of inventing them.
+5. Increment `version` in `site.config.json`, then run `node scripts/prepare-release.mjs` and `node scripts/check-release.mjs`. GitHub Actions repeats the release check on pull requests and `main` pushes.
+6. Compare the source tree with the current GitHub `main` before publishing. Publish one atomic commit; never force-push over newer work. The connected GitHub account can be used if terminal Git credentials lack write access.
+7. Confirm Vercel deployed that exact commit to the **travel-command-center** project, then check the live trip cards, expanded details, timeline, and offline refresh.
+
+## Privacy note
+
+The repository is public even when a deployment requires Vercel sign-in. The validator blocks obvious private field names and identifier-shaped text. Existing price/payment wording is fingerprinted in `privacy-baseline.json` and reported as warnings; new or changed wording of that kind fails validation. The baseline is not an endorsement of those older details. It cannot prove that every free-text value is share-safe, so review warnings before publishing and do not add more without an explicit privacy decision.

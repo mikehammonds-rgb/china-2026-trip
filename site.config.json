@@ -1,0 +1,13 @@
+{
+  "appName": "Travel Command Center",
+  "repository": "mikehammonds-rgb/china-2026-trip",
+  "vercelProject": "travel-command-center",
+  "productionUrl": "https://mike-travel-command-center.vercel.app",
+  "version": "20260923-2",
+  "tripModules": [
+    "data/archive-index.js",
+    "data/active-trip.js",
+    "data/november-cruise.js",
+    "data/upcoming-cruises.js"
+  ]
+}

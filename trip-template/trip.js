@@ -1,4 +1,4 @@
-// Copy this file to data/active-trip.js and replace the sample values.
+// Adapt this example in a trip source module listed in site.config.json.
 // Never include confirmation numbers, ticket numbers, passport data,
 // payment details, traveler legal names, or private document links.
 window.TRAVEL_COMMAND_CENTER_ACTIVE_TRIP={

@@ -1,47 +1,38 @@
 # Travel Command Center trip schema
 
-The application has one reusable renderer and one active trip at a time. Trip facts live in `data/active-trip.js`; completed trips live in dated folders under `archived-trips/`.
+The app renders multiple upcoming trips from one registry. Source modules are listed in `site.config.json` and assembled into the generated `data/trips.js`. The earliest trip is shown by default; `?trip=<id>` opens a specific trip. Completed trips can be preserved under `archived-trips/` and listed in `data/archive-index.js`.
 
-## Intake workflow
+## Intake
 
-1. Receive the newest spreadsheet plus any supporting notes or documents.
-2. Treat every source file as private input.
-3. Normalize share-safe fields into the structure shown in `trip-template/trip.js`.
-4. Exclude confirmation numbers, ticket numbers, passport data, payment information, traveler legal names, loyalty numbers, and private document links.
-5. Validate dates, stop order, hotel nights, and transportation continuity.
-6. Replace `data/active-trip.js`, increment the service-worker build, test mobile/offline behavior, and deploy.
+1. Use the named app and source repository in `README.md`; do not route a cruise automatically to Club Royale.
+2. Read private source material only as needed. Reuse facts already verified in the task.
+3. Normalize share-safe details to the example in `trip-template/trip.js`. Do not include confirmation numbers, ticket numbers, passport data, payment information, legal names, loyalty numbers, or private document links.
+4. Make uncertainty explicit. If the source lacks port-day times, flight details, transfer bookings, or check-in windows, do not guess.
+5. Validate all trips and check the live result after publishing.
 
-The source spreadsheet can use any reasonable organization. Dex maps its fields into the normalized schema; the dashboard does not ingest private spreadsheets in the browser.
+## Required fields per trip
 
-## Required active-trip fields
-
-- `id`: stable lowercase slug such as `italy-2027`
+- `id`: stable lowercase slug, unique across the registry
 - `title`
-- `start` and `end`: ISO `YYYY-MM-DD`
-- `cities`: at least one city with a stable `id`, name, and dates
+- `start` and `end`: real ISO `YYYY-MM-DD` dates, in order
+- `cities`: at least one stop with a unique `id` and a `name`
 
-## Optional domains
+## Optional fields
 
-- `days`: date-indexed daily summaries
-- `cities[].days`: detailed plans for each stop
+- `days`: ISO-dated summaries within the trip range
+- `cities[].days`: detailed plans for a stop
 - `cities[].hotel`: share-safe hotel details and amenities
 - `cities[].highlights`, `nightlife`, and `photoSpots`
-- `transport`: flights, trains, transfers, rental cars, cruises, and stays
-- `timeline`: end-to-end ordered events
-- `support`: emergency, guide, tour operator, or local contacts
-- `sharedPhotosUrl`
-- `destinationLanguage`
+- `transport`: flights, trains, transfers, cruises, and stays
+- `timeline`: ordered trip events
+- `phases` and `readiness`: chapters and planning checklist
+- `support`: public or share-safe contacts
+- `sharedPhotosUrl` and `destinationLanguage`
 
-Missing optional domains are hidden automatically.
+Missing optional sections are hidden by the renderer. Keep a trip's date, route, and status consistent across its card, day plans, transport, and timeline.
 
-## Archive workflow
+## Release and archive
 
-When a trip ends:
+After editing a source module, update `site.config.json` if the module list changed, bump its version, run `node scripts/prepare-release.mjs`, and run `node scripts/check-release.mjs`. The bundle, page query versions, app build ID, and offline cache version must agree.
 
-1. Create `archived-trips/<location>-<start>-to-<end>/`.
-2. Preserve the final deployed trip package in that folder.
-3. Add its share-safe metadata to `data/archive-index.js`.
-4. Create an immutable Git tag named `trip/<trip-id>-final`.
-5. Set `data/active-trip.js` back to `null` until the next trip is ready.
-
-Archive folders are public and share-safe. Private source spreadsheets and booking identifiers never enter Git or the deployed site.
+When a trip is complete, preserve its final share-safe package under `archived-trips/<location>-<start>-to-<end>/`, update `data/archive-index.js`, and remove the trip from the upcoming registry in the same release. Do not archive or delete trip data solely because its end date passed without reviewing its final state.
